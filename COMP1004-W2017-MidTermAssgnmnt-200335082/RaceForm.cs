@@ -16,5 +16,25 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         {
             InitializeComponent();
         }
+
+        private void HumanRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Human1;
+        }
+
+        private void DwarfRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Dwarf1;
+        }
+
+        private void ElfRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Elf1;
+        }
+
+        private void HalflingRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Halfling2;
+        }
     }
 }
