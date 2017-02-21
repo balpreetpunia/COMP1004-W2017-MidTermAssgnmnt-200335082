@@ -13,11 +13,14 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
     public partial class RaceForm : Form
     {
         private List<TextBox> _abilitiesInRaceForm;
+        private int _radioButtonInRace = 0;
 
-        public RaceForm(List<TextBox> _abilitiesAsParameter)
+        
+
+        public RaceForm(List<TextBox> _abilities)
         {
             InitializeComponent();
-            _abilitiesInRaceForm = _abilitiesAsParameter;
+            _abilitiesInRaceForm = _abilities;
         }
 
         
@@ -32,6 +35,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             }
 
             RacialBonusTextBox.Text = "All abilities increased by +5";
+            _radioButtonInRace = 1;
         }
 
         private void DwarfRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -44,6 +48,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             _abilitiesInRaceForm[5].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[5].Text) - 10);
 
             RacialBonusTextBox.Text = "STR +20 PER +20 CHA -10";
+            _radioButtonInRace = 2;
 
         }
 
@@ -56,6 +61,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
             RacialBonusTextBox.Text = "DEX +15 CHA +15";
 
+            _radioButtonInRace = 3;
         }
 
         private void HalflingRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -69,14 +75,18 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
             RacialBonusTextBox.Text = "DEX +20 INT +20 STR -10";
 
+            _radioButtonInRace = 4;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            JobForm jobform = new JobForm(_abilitiesInRaceForm);
+            JobForm jobform = new JobForm(_abilitiesInRaceForm, _radioButtonInRace);
             jobform.ShowDialog();
+
             this.Close();
         }
+
+        
     }
 
 }

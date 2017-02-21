@@ -117,9 +117,9 @@
             this.HealthPointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HealthPointsLabel.Location = new System.Drawing.Point(94, 337);
             this.HealthPointsLabel.Name = "HealthPointsLabel";
-            this.HealthPointsLabel.Size = new System.Drawing.Size(198, 31);
+            this.HealthPointsLabel.Size = new System.Drawing.Size(343, 31);
             this.HealthPointsLabel.TabIndex = 5;
-            this.HealthPointsLabel.Text = "Health Points:";
+            this.HealthPointsLabel.Text = "Health Points: Select Job";
             // 
             // JobForm
             // 
