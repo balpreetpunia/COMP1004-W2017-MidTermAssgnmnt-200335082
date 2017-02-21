@@ -12,9 +12,12 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     public partial class JobForm : Form
     {
-        public JobForm()
+        List<TextBox> _abilitiesInJobForm;
+
+        public JobForm(List<TextBox> _abilitiesAsParameter)
         {
             InitializeComponent();
+            _abilitiesInJobForm = _abilitiesAsParameter;
         }
     }
 }

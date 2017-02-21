@@ -15,7 +15,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
     {
         // Random Number object
         Random random = new Random();
-        private List<TextBox> _abilities;
+        public List<TextBox> _abilities;
 
         public AbilityForm()
         {
@@ -77,9 +77,9 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RaceForm raceform = new RaceForm();
-            raceform.Show();
+            RaceForm raceform = new RaceForm(_abilities);
+            raceform.ShowDialog();
+            this.Close();
         }
     }
 }

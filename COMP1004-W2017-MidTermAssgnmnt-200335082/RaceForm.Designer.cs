@@ -43,6 +43,7 @@
             // 
             // CharacterPictureBox
             // 
+            this.CharacterPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CharacterPictureBox.Location = new System.Drawing.Point(239, 84);
             this.CharacterPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.CharacterPictureBox.Name = "CharacterPictureBox";
@@ -60,6 +61,7 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // RacialBonusLabel
             // 
