@@ -12,9 +12,13 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     public partial class FinalForm : Form
     {
-        public FinalForm()
+        private List<TextBox> _abilitiesInFinalForm;
+
+        public FinalForm(List<TextBox> _abilitiesAsParameter)
         {
             InitializeComponent();
+            _abilitiesInFinalForm = _abilitiesAsParameter;
+
         }
     }
 }

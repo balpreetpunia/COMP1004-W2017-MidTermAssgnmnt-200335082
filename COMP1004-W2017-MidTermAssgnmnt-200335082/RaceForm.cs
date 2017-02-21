@@ -12,7 +12,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     public partial class RaceForm : Form
     {
-        List<TextBox> _abilitiesInRaceForm;
+        private List<TextBox> _abilitiesInRaceForm;
 
         public RaceForm(List<TextBox> _abilitiesAsParameter)
         {

@@ -15,7 +15,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
     {
         // Random Number object
         Random random = new Random();
-        public List<TextBox> _abilities;
+        private List<TextBox> _abilities;
 
         public AbilityForm()
         {
