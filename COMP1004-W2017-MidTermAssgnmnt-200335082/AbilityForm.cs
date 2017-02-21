@@ -15,10 +15,25 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
     {
         // Random Number object
         Random random = new Random();
+        private List<TextBox> _abilities;
 
         public AbilityForm()
         {
             InitializeComponent();
+
+            // Instantiates a List of Text Boxes
+            this._abilities = new List<TextBox>();
+            this._initializeAbilities();
+        }
+
+        private void _initializeAbilities()
+        {
+            this._abilities.Add(STRTextBox);
+            this._abilities.Add(DEXTextBox);
+            this._abilities.Add(ENDTextBox);
+            this._abilities.Add(INTTextBox);
+            this._abilities.Add(PERTextBox);
+            this._abilities.Add(CHATextBox);
         }
 
         /// <summary>
@@ -39,8 +54,32 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(Roll3D10().ToString());
+            // iterates through the TextBox List (_abilities)
+            for (int ability = 0; ability < this._abilities.Count; ability++)
+            {
+                // roll 5d10 and assign the value to a temp variable
+                int currentRoll = this.Roll3D10();
+
+               /* // if my ability is physical (ability 0 to 3) add to health
+                if (ability < 4)
+                {
+                    this._health += currentRoll;
+                }
+                else // otherwise add to karma
+                {
+                    this._karma += currentRoll;
+                }*/
+
+                // assign the current roll to the current ability
+                this._abilities[ability].Text = currentRoll.ToString();
+            }
         }
 
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RaceForm raceform = new RaceForm();
+            raceform.Show();
+        }
     }
 }
