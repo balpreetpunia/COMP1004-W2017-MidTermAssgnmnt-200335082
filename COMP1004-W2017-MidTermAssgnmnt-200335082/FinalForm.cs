@@ -27,6 +27,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             this._healthPoints = _healthPoints;
             CharacterImage();
             AdditionalInformation();
+            Ability();
         }
 
         private string Race()
@@ -73,6 +74,16 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             JobTextBox.Text = _jobType;
             RaceTextBox.Text = Race();
             HealthPointsTextBox.Text = _healthPoints;
+        }
+
+        private void Ability()
+        {
+            STRTextBox.Text = _abilitiesInFinalForm[0].Text;
+            DEXTextBox.Text = _abilitiesInFinalForm[1].Text;
+            ENDTextBox.Text = _abilitiesInFinalForm[2].Text;
+            INTTextBox.Text = _abilitiesInFinalForm[3].Text;
+            PERTextBox.Text = _abilitiesInFinalForm[4].Text;
+            CHATextBox.Text = _abilitiesInFinalForm[5].Text;
         }
     }
 }

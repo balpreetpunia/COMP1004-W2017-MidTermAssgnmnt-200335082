@@ -39,10 +39,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FinalFormCharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.CharacterInformationGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.WeightTextBox = new System.Windows.Forms.TextBox();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.AgeLabel = new System.Windows.Forms.Label();
@@ -149,10 +149,10 @@
             // 
             // CharacterInformationGroupBox
             // 
-            this.CharacterInformationGroupBox.Controls.Add(this.textBox4);
-            this.CharacterInformationGroupBox.Controls.Add(this.textBox3);
-            this.CharacterInformationGroupBox.Controls.Add(this.textBox2);
-            this.CharacterInformationGroupBox.Controls.Add(this.textBox1);
+            this.CharacterInformationGroupBox.Controls.Add(this.WeightTextBox);
+            this.CharacterInformationGroupBox.Controls.Add(this.HeightTextBox);
+            this.CharacterInformationGroupBox.Controls.Add(this.AgeTextBox);
+            this.CharacterInformationGroupBox.Controls.Add(this.NameTextBox);
             this.CharacterInformationGroupBox.Controls.Add(this.WeightLabel);
             this.CharacterInformationGroupBox.Controls.Add(this.HeightLabel);
             this.CharacterInformationGroupBox.Controls.Add(this.AgeLabel);
@@ -164,49 +164,49 @@
             this.CharacterInformationGroupBox.TabStop = false;
             this.CharacterInformationGroupBox.Text = "Character Information";
             // 
-            // textBox4
+            // WeightTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(259, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 7;
+            this.WeightTextBox.Location = new System.Drawing.Point(259, 83);
+            this.WeightTextBox.Name = "WeightTextBox";
+            this.WeightTextBox.Size = new System.Drawing.Size(100, 26);
+            this.WeightTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // HeightTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(259, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 6;
+            this.HeightTextBox.Location = new System.Drawing.Point(259, 38);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.Size = new System.Drawing.Size(100, 26);
+            this.HeightTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // AgeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(77, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 5;
+            this.AgeTextBox.Location = new System.Drawing.Point(77, 82);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.Size = new System.Drawing.Size(100, 26);
+            this.AgeTextBox.TabIndex = 5;
             // 
-            // textBox1
+            // NameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 4;
+            this.NameTextBox.Location = new System.Drawing.Point(77, 38);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(100, 26);
+            this.NameTextBox.TabIndex = 4;
             // 
             // WeightLabel
             // 
             this.WeightLabel.AutoSize = true;
-            this.WeightLabel.Location = new System.Drawing.Point(193, 85);
+            this.WeightLabel.Location = new System.Drawing.Point(190, 85);
             this.WeightLabel.Name = "WeightLabel";
-            this.WeightLabel.Size = new System.Drawing.Size(63, 20);
+            this.WeightLabel.Size = new System.Drawing.Size(70, 20);
             this.WeightLabel.TabIndex = 3;
             this.WeightLabel.Text = "Weight:";
             // 
             // HeightLabel
             // 
             this.HeightLabel.AutoSize = true;
-            this.HeightLabel.Location = new System.Drawing.Point(196, 41);
+            this.HeightLabel.Location = new System.Drawing.Point(193, 41);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(60, 20);
+            this.HeightLabel.Size = new System.Drawing.Size(67, 20);
             this.HeightLabel.TabIndex = 2;
             this.HeightLabel.Text = "Height:";
             // 
@@ -215,7 +215,7 @@
             this.AgeLabel.AutoSize = true;
             this.AgeLabel.Location = new System.Drawing.Point(29, 86);
             this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(42, 20);
+            this.AgeLabel.Size = new System.Drawing.Size(46, 20);
             this.AgeLabel.TabIndex = 1;
             this.AgeLabel.Text = "Age:";
             // 
@@ -224,7 +224,7 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.Location = new System.Drawing.Point(16, 41);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(55, 20);
+            this.NameLabel.Size = new System.Drawing.Size(60, 20);
             this.NameLabel.TabIndex = 0;
             this.NameLabel.Text = "Name:";
             // 
@@ -270,27 +270,27 @@
             // HealthPointsLabel
             // 
             this.HealthPointsLabel.AutoSize = true;
-            this.HealthPointsLabel.Location = new System.Drawing.Point(16, 108);
+            this.HealthPointsLabel.Location = new System.Drawing.Point(11, 108);
             this.HealthPointsLabel.Name = "HealthPointsLabel";
-            this.HealthPointsLabel.Size = new System.Drawing.Size(108, 20);
+            this.HealthPointsLabel.Size = new System.Drawing.Size(122, 20);
             this.HealthPointsLabel.TabIndex = 2;
             this.HealthPointsLabel.Text = "Health Points:";
             // 
             // RaceLabel
             // 
             this.RaceLabel.AutoSize = true;
-            this.RaceLabel.Location = new System.Drawing.Point(73, 71);
+            this.RaceLabel.Location = new System.Drawing.Point(77, 71);
             this.RaceLabel.Name = "RaceLabel";
-            this.RaceLabel.Size = new System.Drawing.Size(51, 20);
+            this.RaceLabel.Size = new System.Drawing.Size(56, 20);
             this.RaceLabel.TabIndex = 1;
             this.RaceLabel.Text = "Race:";
             // 
             // JobLabel
             // 
             this.JobLabel.AutoSize = true;
-            this.JobLabel.Location = new System.Drawing.Point(85, 34);
+            this.JobLabel.Location = new System.Drawing.Point(90, 34);
             this.JobLabel.Name = "JobLabel";
-            this.JobLabel.Size = new System.Drawing.Size(39, 20);
+            this.JobLabel.Size = new System.Drawing.Size(43, 20);
             this.JobLabel.TabIndex = 0;
             this.JobLabel.Text = "Job:";
             // 
@@ -317,7 +317,7 @@
             // 
             // CHATextBox
             // 
-            this.CHATextBox.Location = new System.Drawing.Point(108, 265);
+            this.CHATextBox.Location = new System.Drawing.Point(105, 265);
             this.CHATextBox.Name = "CHATextBox";
             this.CHATextBox.ReadOnly = true;
             this.CHATextBox.Size = new System.Drawing.Size(100, 26);
@@ -325,7 +325,7 @@
             // 
             // PERTextBox
             // 
-            this.PERTextBox.Location = new System.Drawing.Point(108, 219);
+            this.PERTextBox.Location = new System.Drawing.Point(105, 219);
             this.PERTextBox.Name = "PERTextBox";
             this.PERTextBox.ReadOnly = true;
             this.PERTextBox.Size = new System.Drawing.Size(100, 26);
@@ -333,7 +333,7 @@
             // 
             // INTTextBox
             // 
-            this.INTTextBox.Location = new System.Drawing.Point(108, 173);
+            this.INTTextBox.Location = new System.Drawing.Point(105, 173);
             this.INTTextBox.Name = "INTTextBox";
             this.INTTextBox.ReadOnly = true;
             this.INTTextBox.Size = new System.Drawing.Size(100, 26);
@@ -341,7 +341,7 @@
             // 
             // ENDTextBox
             // 
-            this.ENDTextBox.Location = new System.Drawing.Point(108, 127);
+            this.ENDTextBox.Location = new System.Drawing.Point(105, 127);
             this.ENDTextBox.Name = "ENDTextBox";
             this.ENDTextBox.ReadOnly = true;
             this.ENDTextBox.Size = new System.Drawing.Size(100, 26);
@@ -349,7 +349,7 @@
             // 
             // DEXTextBox
             // 
-            this.DEXTextBox.Location = new System.Drawing.Point(108, 81);
+            this.DEXTextBox.Location = new System.Drawing.Point(105, 81);
             this.DEXTextBox.Name = "DEXTextBox";
             this.DEXTextBox.ReadOnly = true;
             this.DEXTextBox.Size = new System.Drawing.Size(100, 26);
@@ -357,7 +357,7 @@
             // 
             // STRTextBox
             // 
-            this.STRTextBox.Location = new System.Drawing.Point(108, 35);
+            this.STRTextBox.Location = new System.Drawing.Point(105, 35);
             this.STRTextBox.Name = "STRTextBox";
             this.STRTextBox.ReadOnly = true;
             this.STRTextBox.Size = new System.Drawing.Size(100, 26);
@@ -366,54 +366,54 @@
             // CHALabel
             // 
             this.CHALabel.AutoSize = true;
-            this.CHALabel.Location = new System.Drawing.Point(14, 268);
+            this.CHALabel.Location = new System.Drawing.Point(36, 268);
             this.CHALabel.Name = "CHALabel";
-            this.CHALabel.Size = new System.Drawing.Size(43, 20);
+            this.CHALabel.Size = new System.Drawing.Size(46, 20);
             this.CHALabel.TabIndex = 5;
             this.CHALabel.Text = "CHA";
             // 
             // PERLabel
             // 
             this.PERLabel.AutoSize = true;
-            this.PERLabel.Location = new System.Drawing.Point(21, 222);
+            this.PERLabel.Location = new System.Drawing.Point(37, 222);
             this.PERLabel.Name = "PERLabel";
-            this.PERLabel.Size = new System.Drawing.Size(42, 20);
+            this.PERLabel.Size = new System.Drawing.Size(45, 20);
             this.PERLabel.TabIndex = 4;
             this.PERLabel.Text = "PER";
             // 
             // INTLabel
             // 
             this.INTLabel.AutoSize = true;
-            this.INTLabel.Location = new System.Drawing.Point(14, 176);
+            this.INTLabel.Location = new System.Drawing.Point(45, 176);
             this.INTLabel.Name = "INTLabel";
-            this.INTLabel.Size = new System.Drawing.Size(34, 20);
+            this.INTLabel.Size = new System.Drawing.Size(37, 20);
             this.INTLabel.TabIndex = 3;
             this.INTLabel.Text = "INT";
             // 
             // ENDLabel
             // 
             this.ENDLabel.AutoSize = true;
-            this.ENDLabel.Location = new System.Drawing.Point(21, 130);
+            this.ENDLabel.Location = new System.Drawing.Point(36, 130);
             this.ENDLabel.Name = "ENDLabel";
-            this.ENDLabel.Size = new System.Drawing.Size(43, 20);
+            this.ENDLabel.Size = new System.Drawing.Size(46, 20);
             this.ENDLabel.TabIndex = 2;
             this.ENDLabel.Text = "END";
             // 
             // DEXLabel
             // 
             this.DEXLabel.AutoSize = true;
-            this.DEXLabel.Location = new System.Drawing.Point(21, 84);
+            this.DEXLabel.Location = new System.Drawing.Point(36, 84);
             this.DEXLabel.Name = "DEXLabel";
-            this.DEXLabel.Size = new System.Drawing.Size(43, 20);
+            this.DEXLabel.Size = new System.Drawing.Size(46, 20);
             this.DEXLabel.TabIndex = 1;
             this.DEXLabel.Text = "DEX";
             // 
             // STRLabel
             // 
             this.STRLabel.AutoSize = true;
-            this.STRLabel.Location = new System.Drawing.Point(21, 40);
+            this.STRLabel.Location = new System.Drawing.Point(38, 40);
             this.STRLabel.Name = "STRLabel";
-            this.STRLabel.Size = new System.Drawing.Size(41, 20);
+            this.STRLabel.Size = new System.Drawing.Size(44, 20);
             this.STRLabel.TabIndex = 0;
             this.STRLabel.Text = "STR";
             // 
@@ -426,7 +426,7 @@
             this.Controls.Add(this.CharacterInformationGroupBox);
             this.Controls.Add(this.FinalFormCharacterPictureBox);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinalForm";
@@ -460,10 +460,10 @@
         private System.Windows.Forms.GroupBox CharacterInformationGroupBox;
         private System.Windows.Forms.GroupBox AdditionalInformationGroupBox;
         private System.Windows.Forms.GroupBox AbilitiesGroupBox;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox WeightTextBox;
+        private System.Windows.Forms.TextBox HeightTextBox;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Label HeightLabel;
         private System.Windows.Forms.Label AgeLabel;
