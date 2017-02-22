@@ -57,29 +57,24 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             // iterates through the TextBox List (_abilities)
             for (int ability = 0; ability < this._abilities.Count; ability++)
             {
-                // roll 5d10 and assign the value to a temp variable
+                // Roll3D10 and assign the value to a temp variable
                 int currentRoll = this.Roll3D10();
 
-               /* // if my ability is physical (ability 0 to 3) add to health
-                if (ability < 4)
-                {
-                    this._health += currentRoll;
-                }
-                else // otherwise add to karma
-                {
-                    this._karma += currentRoll;
-                }*/
-
-                // assign the current roll to the current ability
                 this._abilities[ability].Text = currentRoll.ToString();
             }
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            RaceForm raceform = new RaceForm(_abilities);
-            raceform.ShowDialog();
-            this.Close();
+                if (this._abilities[0].Text != "")
+                {
+                    RaceForm raceform = new RaceForm(_abilities);
+                    raceform.ShowDialog();
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Please roll first!");
+            
         }
     }
 }

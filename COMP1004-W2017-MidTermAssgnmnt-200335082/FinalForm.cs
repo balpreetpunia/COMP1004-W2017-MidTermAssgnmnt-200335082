@@ -85,5 +85,67 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             PERTextBox.Text = _abilitiesInFinalForm[4].Text;
             CHATextBox.Text = _abilitiesInFinalForm[5].Text;
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutform = new AboutForm();
+            aboutform.ShowDialog();
+        }
+
+        private void fontStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            fontDialog.MaxSize = 18;
+            fontDialog.MinSize = 10;
+            fontDialog.ShowDialog();
+
+            NameLabel.Font = fontDialog.Font;
+            AgeLabel.Font = fontDialog.Font;
+            HeightLabel.Font = fontDialog.Font;
+            WeightLabel.Font = fontDialog.Font;
+            JobLabel.Font = fontDialog.Font;
+            RaceLabel.Font = fontDialog.Font;
+            HealthPointsLabel.Font = fontDialog.Font;
+            STRLabel.Font = fontDialog.Font;
+            DEXLabel.Font = fontDialog.Font;
+            ENDLabel.Font = fontDialog.Font;
+            INTLabel.Font = fontDialog.Font;
+            PERLabel.Font = fontDialog.Font;
+            CHALabel.Font = fontDialog.Font;
+            NameTextBox.Font = fontDialog.Font;
+            AgeTextBox.Font = fontDialog.Font;
+            HeightTextBox.Font = fontDialog.Font;
+            WeightTextBox.Font = fontDialog.Font;
+            JobTextBox.Font = fontDialog.Font;
+            RaceTextBox.Font = fontDialog.Font;
+            HealthPointsTextBox.Font = fontDialog.Font;
+            STRTextBox.Font = fontDialog.Font;
+            DEXTextBox.Font = fontDialog.Font;
+            ENDTextBox.Font = fontDialog.Font;
+            INTTextBox.Font = fontDialog.Font;
+            PERTextBox.Font = fontDialog.Font;
+            CHATextBox.Font = fontDialog.Font;
+            CharacterInformationGroupBox.Font = fontDialog.Font;
+            AdditionalInformationGroupBox.Font = fontDialog.Font;
+            AbilitiesGroupBox.Font = fontDialog.Font;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Print(),"Print Preview",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private String Print()
+        {
+            String print = ("Name: " + NameTextBox.Text + "\t" + "Job: " + _jobType + "\t" + "Race: " + Race() + "\t" + "Helth Points: " + _healthPoints + "\n"+
+                            "ABILITIES"+ "\t" +"STR: "+ STRTextBox.Text+"    DEX: " + DEXTextBox.Text + "    ENF: " + ENDTextBox.Text + "    INT: " + INTTextBox.Text
+                            + "    PER: " + PERTextBox.Text + "    CHA: " + CHATextBox.Text);
+            return print;
+        }
     }
 }

@@ -31,13 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FinalFormCharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.CharacterInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.HeightTextBox = new System.Windows.Forms.TextBox();
@@ -67,11 +65,13 @@
             this.ENDLabel = new System.Windows.Forms.Label();
             this.DEXLabel = new System.Windows.Forms.Label();
             this.STRLabel = new System.Windows.Forms.Label();
+            this.FinalFormCharacterPictureBox = new System.Windows.Forms.PictureBox();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FinalFormCharacterPictureBox)).BeginInit();
             this.CharacterInformationGroupBox.SuspendLayout();
             this.AdditionalInformationGroupBox.SuspendLayout();
             this.AbilitiesGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FinalFormCharacterPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -95,20 +95,12 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
-            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.printToolStripMenuItem.Text = "&Print";
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -121,8 +113,9 @@
             // fontStripMenuItem
             // 
             this.fontStripMenuItem.Name = "fontStripMenuItem";
-            this.fontStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.fontStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fontStripMenuItem.Text = "Font";
+            this.fontStripMenuItem.Click += new System.EventHandler(this.fontStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -135,17 +128,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // FinalFormCharacterPictureBox
-            // 
-            this.FinalFormCharacterPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.FinalFormCharacterPictureBox.Location = new System.Drawing.Point(301, 210);
-            this.FinalFormCharacterPictureBox.Name = "FinalFormCharacterPictureBox";
-            this.FinalFormCharacterPictureBox.Size = new System.Drawing.Size(290, 262);
-            this.FinalFormCharacterPictureBox.TabIndex = 1;
-            this.FinalFormCharacterPictureBox.TabStop = false;
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // CharacterInformationGroupBox
             // 
@@ -417,6 +402,25 @@
             this.STRLabel.TabIndex = 0;
             this.STRLabel.Text = "STR";
             // 
+            // FinalFormCharacterPictureBox
+            // 
+            this.FinalFormCharacterPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.FinalFormCharacterPictureBox.Location = new System.Drawing.Point(301, 210);
+            this.FinalFormCharacterPictureBox.Name = "FinalFormCharacterPictureBox";
+            this.FinalFormCharacterPictureBox.Size = new System.Drawing.Size(290, 262);
+            this.FinalFormCharacterPictureBox.TabIndex = 1;
+            this.FinalFormCharacterPictureBox.TabStop = false;
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -434,13 +438,13 @@
             this.Text = "Your Character Selections";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FinalFormCharacterPictureBox)).EndInit();
             this.CharacterInformationGroupBox.ResumeLayout(false);
             this.CharacterInformationGroupBox.PerformLayout();
             this.AdditionalInformationGroupBox.ResumeLayout(false);
             this.AdditionalInformationGroupBox.PerformLayout();
             this.AbilitiesGroupBox.ResumeLayout(false);
             this.AbilitiesGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FinalFormCharacterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

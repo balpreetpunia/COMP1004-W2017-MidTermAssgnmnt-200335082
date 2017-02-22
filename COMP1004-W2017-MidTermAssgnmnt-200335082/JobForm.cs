@@ -14,7 +14,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
     {
         private List<TextBox> _abilitiesInJobForm;
         private int _radioButtonInJob;
-        private String _jobType;
+        private String _jobType = "";
         private String _healthPoints;
 
         public JobForm(List<TextBox> _abilitiesInRaceForm, int _radioButtonInRace)
@@ -54,9 +54,14 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            FinalForm finalform = new FinalForm(_abilitiesInJobForm, _radioButtonInJob,_jobType,_healthPoints);
-            finalform.ShowDialog();
-            this.Close();
+            if (_jobType != "")
+            {
+                FinalForm finalform = new FinalForm(_abilitiesInJobForm, _radioButtonInJob, _jobType, _healthPoints);
+                finalform.ShowDialog();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Please select a job first!");
         }
     }
 }

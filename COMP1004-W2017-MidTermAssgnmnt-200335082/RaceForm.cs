@@ -31,7 +31,7 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             
             for(int ability = 0; ability < _abilitiesInRaceForm.Count; ability++)
             {
-                _abilitiesInRaceForm[ability].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[ability].Text) + 5);
+                _abilitiesInRaceForm[ability].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[ability].Text) + 5));
             }
 
             RacialBonusTextBox.Text = "All abilities increased by +5";
@@ -42,10 +42,10 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Dwarf1;
 
-            _abilitiesInRaceForm[0].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[0].Text) + 20);
-            _abilitiesInRaceForm[4].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[4].Text) + 20);
+            _abilitiesInRaceForm[0].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[0].Text) + 20));
+            _abilitiesInRaceForm[4].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[4].Text) + 20));
 
-            _abilitiesInRaceForm[5].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[5].Text) - 10);
+            _abilitiesInRaceForm[5].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[5].Text) - 10));
 
             RacialBonusTextBox.Text = "STR +20 PER +20 CHA -10";
             _radioButtonInRace = 2;
@@ -56,8 +56,8 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Elf1;
 
-            _abilitiesInRaceForm[1].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[1].Text) + 15);
-            _abilitiesInRaceForm[5].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[5].Text) + 15);
+            _abilitiesInRaceForm[1].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[1].Text) + 15));
+            _abilitiesInRaceForm[5].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[5].Text) + 15));
 
             RacialBonusTextBox.Text = "DEX +15 CHA +15";
 
@@ -68,24 +68,46 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Halfling2;
 
-            _abilitiesInRaceForm[1].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[1].Text) + 20);
-            _abilitiesInRaceForm[3].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[3].Text) + 20);
+            _abilitiesInRaceForm[1].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[1].Text) + 20));
+            _abilitiesInRaceForm[3].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[3].Text) + 20));
 
-            _abilitiesInRaceForm[0].Text = Convert.ToString(int.Parse(_abilitiesInRaceForm[0].Text) - 10);
+            _abilitiesInRaceForm[0].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[0].Text) - 10));
 
             RacialBonusTextBox.Text = "DEX +20 INT +20 STR -10";
 
             _radioButtonInRace = 4;
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private int Ability_Validation(int ability)
         {
-            JobForm jobform = new JobForm(_abilitiesInRaceForm, _radioButtonInRace);
-            jobform.ShowDialog();
-
-            this.Close();
+            if(ability < 2 && ability < 51)
+            {
+                return ability;
+            }
+            else if(ability <2)
+            {
+                return ability = 3;
+            }
+            else
+            {
+                return ability = 50;
+            }
         }
 
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            if (RacialBonusTextBox.Text != "")
+            {
+                JobForm jobform = new JobForm(_abilitiesInRaceForm, _radioButtonInRace);
+                jobform.ShowDialog();
+
+                this.Close();
+            }
+            else
+                MessageBox.Show("Please select a race first!");
+            
+        }
+        
         
     }
 
