@@ -7,6 +7,15 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// 
+/// App Name - Midterm Exam
+/// Author's Name - Tom Tsiliopoulos & Balpreet Punia
+/// App Creation Date - 2017-02-24
+/// Student ID - 200335082
+/// 
+/// </summary>
+
 namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     partial class AboutForm : Form

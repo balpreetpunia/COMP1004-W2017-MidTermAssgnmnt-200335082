@@ -8,6 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// 
+/// App Name - Midterm Exam
+/// Author's Name - Tom Tsiliopoulos & Balpreet Punia
+/// App Creation Date - 2017-02-24
+/// Student ID - 200335082
+/// 
+/// </summary>
+
 namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     public partial class RaceForm : Form
@@ -16,7 +25,10 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         private int _radioButtonInRace = 0;
 
         
-
+        /// <summary>
+        /// Initializing _abilities
+        /// </summary>
+        /// <param name="_abilities"></param>
         public RaceForm(List<TextBox> _abilities)
         {
             InitializeComponent();
@@ -24,6 +36,13 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
         }
 
         
+        /// <summary>
+        /// Event handler to display picture and to increment or decrement abilities
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
 
         private void HumanRadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -31,13 +50,18 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             
             for(int ability = 0; ability < _abilitiesInRaceForm.Count; ability++)
             {
+                // Passing the new updated ability throught the ability validation method to check that they dont increment more than 50 and less than 3.
                 _abilitiesInRaceForm[ability].Text = Convert.ToString(Ability_Validation(int.Parse(_abilitiesInRaceForm[ability].Text) + 5));
             }
 
             RacialBonusTextBox.Text = "All abilities increased by +5";
             _radioButtonInRace = 1;
         }
-
+        /// <summary>
+        /// Event handler to display picture and to increment or decrement abilities
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DwarfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Dwarf1;
@@ -51,7 +75,11 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             _radioButtonInRace = 2;
 
         }
-
+        /// <summary>
+        /// Event handler to display picture and to increment or decrement abilities
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ElfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Elf1;
@@ -63,7 +91,11 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 
             _radioButtonInRace = 3;
         }
-
+        /// <summary>
+        /// Event handler to display picture and to increment or decrement abilities
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HalflingRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CharacterPictureBox.Image = COMP1004_W2017_MidTermAssgnmnt_200335082.Properties.Resources.M_Halfling2;
@@ -78,6 +110,11 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
             _radioButtonInRace = 4;
         }
 
+        /// <summary>
+        /// Method to validate that the ability does not increment more than 50 or less than 3.
+        /// </summary>
+        /// <param name="ability"></param>
+        /// <returns></returns>
         private int Ability_Validation(int ability)
         {
             if(ability < 2 && ability < 51)
@@ -93,7 +130,11 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
                 return ability = 50;
             }
         }
-
+        /// <summary>
+        /// Event handler for next button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             if (RacialBonusTextBox.Text != "")

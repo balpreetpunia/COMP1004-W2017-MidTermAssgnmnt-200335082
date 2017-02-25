@@ -9,6 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/// <summary>
+/// 
+/// App Name - Midterm Exam
+/// Author's Name - Tom Tsiliopoulos & Balpreet Punia
+/// App Creation Date - 2017-02-24
+/// Student ID - 200335082
+/// 
+/// </summary>
+
+
 namespace COMP1004_W2017_MidTermAssgnmnt_200335082
 {
     public partial class AbilityForm : Form
@@ -63,7 +74,11 @@ namespace COMP1004_W2017_MidTermAssgnmnt_200335082
                 this._abilities[ability].Text = currentRoll.ToString();
             }
         }
-
+        /// <summary>
+        /// Event handler for the next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
                 if (this._abilities[0].Text != "")
